@@ -1,11 +1,14 @@
 import './App.css';
 import React, { useState } from 'react';
+import { act } from 'react-dom/test-utils';
 
 const App = () => {
   const [heading, setHeading] = useState('Magnificent Monkeys');
 
   const clickHandler = () => {
+    act(() => {
     setHeading('Radical Rhinos');
+    });
   };
 
   return (
